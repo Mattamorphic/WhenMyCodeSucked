@@ -1,0 +1,23 @@
+{
+    "name": "mfmbarber/BadData",
+    "description": "PHP 7 Bad Data",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Matt Barber",
+            "email": "mfmbarber@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "mfmbarber\\BadData\\": "src/",
+            "mfmbarber\\Tests\\": "tests/"
+        }
+    },
+    "require": {
+        "php": ">=7.0",
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^6.0"
+    }
+}
