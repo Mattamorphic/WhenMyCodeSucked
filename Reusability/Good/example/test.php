@@ -1,9 +1,9 @@
 <?php
 
 include 'vendor/autoload.php';
-use mfmbarber\Profiler\JsonProfiler as JsonProfiler;
+use mfmbarber\Profiler\ArrayProfiler;
 
-$profiler = new JsonProfiler();
+$profiler = new ArrayProfiler();
 
 $n = 0;
 for ($i = 0; $i < 1000; $i++) {

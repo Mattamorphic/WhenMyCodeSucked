@@ -31,3 +31,5 @@ function binarySearch($item, array $arr, int $low = 0, int $high = null) : ?int 
     list($low, $high) = ($item < $arr[$mid]) ? [$low, $mid] : [$mid + 1, $high];
     return binarySearch($item, $arr, $low, $high);
 }
+
+echo binarySearch(11, [0,1,3,5,7,11,13,17,19,23]);

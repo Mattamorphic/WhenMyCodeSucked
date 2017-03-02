@@ -37,9 +37,9 @@ class Analyser
         $mean = 0;
         foreach ($this->data->getRow() as $i => $row) {
             ++$i;
-            $delta = $row[$key] - $mean;
+            $delta = $row[$field] - $mean;
             $mean += $delta / $i;
-            $delta2 = $row[$key] - $mean;
+            $delta2 = $row[$field] - $mean;
             $variance += $delta * $delta2;
         }
         if ($i < 2) {

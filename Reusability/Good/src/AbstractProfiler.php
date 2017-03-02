@@ -12,7 +12,6 @@ abstract class AbstractProfiler {
     private $data;
     private $counter;
 
-    protected $source;
     protected $initialMem;
     protected $initialTime;
 
@@ -20,25 +19,22 @@ abstract class AbstractProfiler {
      * Upon instantiating the profiler set the initial state, and register
      * the 'tick' function
      *
-     * @param   DataInterface   $source     The source to send the data to
-     *
+     * @return void
     **/
-    public function __construct(DataInterface $source = null)
+    public function __construct()
     {
-        if ($source !== null) {
-            $this->source = $source;
-        }
         $this->initialMem = $this->memoryAsMb();
         $this->initialTime = microtime(true);
         $this->counter = 0;
-        declare(ticks = 1);;
+        declare(ticks = 1);
         register_tick_function([$this, 'tick']);
     }
 
     /**
-    * Upon there being no references to a particular object
-    * or an object is explicitly unset - unregister the tick function
+     * Upon there being no references to a particular object
+     * or an object is explicitly unset - unregister the tick function
      *
+     * @return void
     **/
     public function __destruct()
     {

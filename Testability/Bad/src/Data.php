@@ -32,9 +32,10 @@ class Data {
         if (!is_readable($filename)) {
             throw new \InvalidArgumentException("$filename is not readable");
         }
+
         if (
             !in_array(
-                \finfo::file($filename, FILEINFO_MIME_TYPE),
+                mime_content_type($filename),
                 [
                     'application/vnd.ms-excel',
                     'text/plain',

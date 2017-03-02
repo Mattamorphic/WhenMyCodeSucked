@@ -12,6 +12,11 @@ class CSVData extends AbstractData
 {
     private $fp;
 
+    /**
+     * As this is reading from a file set the file pointer property to null
+     *
+     * @return void
+    **/
     public function __construct()
     {
         $this->fp = null;
@@ -21,6 +26,8 @@ class CSVData extends AbstractData
     /**
      * Upon all references to this variable being removed
      * make sure the file pointer is closed
+     *
+     * @return void
     **/
     public function __destruct()
     {

@@ -11,6 +11,14 @@ use mfmbarber\BetterData\Data\AbstractData;
 class ArrayData extends AbstractData
 {
 
+    /**
+     * Call the parent constructor, then setup the base fields
+     *
+     * @param array     $fields     The data field keys
+     * @param array     $data       The data to analyse
+     *
+     * @return void
+    **/
     public function __construct(array $fields, array $data)
     {
         parent::__construct();
@@ -19,7 +27,9 @@ class ArrayData extends AbstractData
     }
 
     /**
+     * Returns a row from the array of data stored in the property
      *
+     * @return \Generator
     **/
     public function getRow() : \Generator
     {
@@ -30,7 +40,9 @@ class ArrayData extends AbstractData
     }
 
     /**
-     * 
+     * Reset the array pointer to the beginning of the array
+     *
+     * @return void
     **/
     public function reset() : void
     {

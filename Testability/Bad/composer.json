@@ -11,11 +11,11 @@
     "autoload": {
         "psr-4": {
             "mfmbarber\\BadData\\": "src/",
-            "mfmbarber\\Tests\\": "tests/"
+            "mfmbarber\\BadData\\Tests\\": "tests/"
         }
     },
     "require": {
-        "php": ">=7.0",
+        "php": ">=7.0"
     },
     "require-dev": {
         "phpunit/phpunit": "^6.0"

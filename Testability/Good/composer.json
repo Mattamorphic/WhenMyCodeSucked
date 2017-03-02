@@ -11,7 +11,7 @@
     "autoload": {
         "psr-4": {
             "mfmbarber\\BetterData\\": "src/",
-            "mfmbarber\\Tests\\": "tests/"
+            "mfmbarber\\BetterData\\Tests\\": "tests/"
         }
     },
     "require": {
