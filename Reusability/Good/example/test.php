@@ -1,7 +1,7 @@
 <?php
 
 include 'vendor/autoload.php';
-use mfmbarber\Profiler\ArrayProfiler;
+use mfmbarber\Profiler\{JsonProfiler, ArrayProfiler};
 
 $profiler = new ArrayProfiler();
 
